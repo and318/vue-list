@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <title>Vue</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container ">
+            <div class="flex-row mt-5 mb-5">
+                <h3 class="text-center">Crea una nueva tarea</h3>
+            </div>
+            <div class="flex-row">
+                <div class="d-flex justify-content-center ">
+                    <div class="input-group mb-3 col-md-4">
+                        <input v-model="item" type="text" class="form-control">
+                        <div class="input-group-append">
+                            <button v-on:click="add_item" class="btn btn-outline-secondary"
+                                type="button">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-row">
+                <div class="col-md-12">
+                    <h4 class="text-center my-5">Mis tareas</h4>
+                </div>
+                <div class="d-flex  flex-column col-md-12 align-items-center">
+
+                    <div class=" shadow p-3 mb-2 bg-white rounded col-md-6" v-for="item in list_item">{{item}}</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>
